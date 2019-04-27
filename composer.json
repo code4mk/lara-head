@@ -25,7 +25,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Code4mk\\LaraHead": "code4mk/lara-head/src/"
+      "Code4mk\\LaraHead\\": "code4mk/lara-head/src/"
     }
   },
   "extra": {
