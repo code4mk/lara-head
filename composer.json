@@ -1,0 +1,40 @@
+{
+  "name": "code4mk/lara-head",
+  "description": "Easily setup seo meta tag with lara-head",
+  "keywords": [
+    "seo",
+    "meta-tag",
+    "meta",
+    "head",
+    "khead",
+    "code4mk",
+    "0devco"
+  ],
+  "homepage": "https://github.com/code4mk/lara-head",
+  "support": {
+    "issues": "https://github.com/code4mk/lara-head/issues",
+    "source": "https://github.com/code4mk/lara-head"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "code4mk",
+      "email": "hiremostafa@gmail.com",
+      "website": "https://code4mk.org"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Code4mk\\LaraHead": "code4mk/lara-head/src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+        "providers": [
+            "Code4mk\\LaraHead\\LaraHeadServiceProvider"
+        ]
+    }
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev"
+}
