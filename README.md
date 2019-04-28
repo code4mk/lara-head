@@ -28,6 +28,7 @@ class Test
 
 ```php
 {!! Khead::getMeta('viewport') !!}
+// <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
 # link
@@ -38,10 +39,20 @@ Khead::setLink('author',[
   "href"=>"humans.txt"
 ]);
 // access inside view
-
 {!! Khead::getLink('author') !!}
+// <link rel="author" href="humans.txt">
 ```
 
+# script
+
+```php
+Khead::setScript('one',[
+  "src"=>"test.js",
+]);
+// view
+Khead::getScript('one');
+// <script src="test.js"></script>
+```
 # title
 
 ```php
