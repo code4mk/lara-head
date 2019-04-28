@@ -1,6 +1,6 @@
 
 
-# install
+# installation
 
 ```bash
 composer require code4mk/lara-head
@@ -138,8 +138,9 @@ Khead::setTwitCards([
 {!! Khead::getTwitCards() !!}
 ```
 
-
 # Head tags
 
 * [gist link](https://gist.github.com/lancejpollard/1978404)
 * [gethead](https://gethead.info/)
+
+<a href="https://twitter.com/0devco" target="_blank" ><p align="center" ><img src="https://raw.githubusercontent.com/0devco/docs/master/.devco-images/logo-transparent.png"></p></a>

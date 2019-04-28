@@ -2,9 +2,15 @@
 
 namespace Code4mk\LaraHead;
 
+/**
+ * @author    @code4mk <hiremostafa@gmail.com>
+ * @author    @0devco <with@0dev.co>
+ * @copyright 0dev.co (https://0dev.co)
+ */
+
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\AliasLoader;
-use Code4mk\LaraHead\Og;
+use Code4mk\LaraHead\Head as HeadMain;
 
 /**
  * @author    @code4mk <hiremostafa@gmail.com>
@@ -37,7 +43,7 @@ class LaraHeadServiceProvider extends ServiceProvider
    public function register()
    {
      $this->app->bind('khead', function () {
-      return new Og;
+      return new HeadMain;
      });
    }
 }
