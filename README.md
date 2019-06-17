@@ -16,19 +16,19 @@ class Test
 {
   public function home()
   {
-    Khead::setMeta('viewport',[
-      "name" => "viewport",
+    Khead::setMeta('bladeport',[
+      "name" => "bladeport",
       "content"=>"width=device-width, initial-scale=1"
     ]);
   }
 }
 ```
 
-~ inside view <access>
+~ inside blade <access>
 
 ```php
-{!! Khead::getMeta('viewport') !!}
-// <meta name="viewport" content="width=device-width, initial-scale=1">
+{!! Khead::getMeta('bladeport') !!}
+// <meta name="bladeport" content="width=device-width, initial-scale=1">
 ```
 
 # link
@@ -38,7 +38,7 @@ Khead::setLink('author',[
   "rel"=>"author",
   "href"=>"humans.txt"
 ]);
-// access inside view
+// access inside blade
 {!! Khead::getLink('author') !!}
 // <link rel="author" href="humans.txt">
 ```
@@ -49,15 +49,15 @@ Khead::setLink('author',[
 Khead::setScript('one',[
   "src"=>"test.js",
 ]);
-// view
-Khead::getScript('one');
+// blade
+{!! Khead::getScript('one') !!}
 // <script src="test.js"></script>
 ```
 # title
 
 ```php
 Khead::setTitle('this is a title');
-// access view
+// access blade
 {!! Khead::getTitle() !!}
 ```
 
@@ -102,7 +102,7 @@ Khead::setOg([
   ]
 ]);
 
-// access with view
+// access with blade
 
 {!! Khead::getOg() !!}
 ```
@@ -144,7 +144,7 @@ Khead::setTwitCards([
     "content"=>"on"
   ]
 ]);
-// access inside view
+// access inside blade
 
 {!! Khead::getTwitCards() !!}
 ```
