@@ -16,8 +16,8 @@ class Test
 {
   public function home()
   {
-    Khead::setMeta('bladeport',[
-      "name" => "bladeport",
+    Khead::setMeta('viewport',[
+      "name" => "viewport",
       "content"=>"width=device-width, initial-scale=1"
     ]);
   }
@@ -27,7 +27,7 @@ class Test
 ~ inside blade <access>
 
 ```php
-{!! Khead::getMeta('bladeport') !!}
+{{ Khead::getMeta('viewport') }}
 // <meta name="bladeport" content="width=device-width, initial-scale=1">
 ```
 
@@ -38,8 +38,8 @@ Khead::setLink('author',[
   "rel"=>"author",
   "href"=>"humans.txt"
 ]);
-// access inside blade
-{!! Khead::getLink('author') !!}
+// blade
+{{ Khead::getLink('author') }}
 // <link rel="author" href="humans.txt">
 ```
 
@@ -50,15 +50,15 @@ Khead::setScript('one',[
   "src"=>"test.js",
 ]);
 // blade
-{!! Khead::getScript('one') !!}
+{{ Khead::getScript('one') }}
 // <script src="test.js"></script>
 ```
 # title
 
 ```php
 Khead::setTitle('this is a title');
-// access blade
-{!! Khead::getTitle() !!}
+// blade
+{{ Khead::getTitle() }}
 ```
 
 # facebook open graph
@@ -101,10 +101,8 @@ Khead::setOg([
     "content"=>"@code4mk"
   ]
 ]);
-
-// access with blade
-
-{!! Khead::getOg() !!}
+// blade
+{{ Khead::getOg() }}
 ```
 
 # twitter cards
@@ -144,9 +142,8 @@ Khead::setTwitCards([
     "content"=>"on"
   ]
 ]);
-// access inside blade
-
-{!! Khead::getTwitCards() !!}
+// blade
+{{ Khead::getTwitCards() }}
 ```
 
 # Head tags
